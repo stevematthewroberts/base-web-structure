@@ -1,0 +1,264 @@
+// Navigation.less
+// Navigation styles
+
+@color_1: #fff;
+@color_2: #a5ce41;
+
+/* Main Navigation
+-------------------------------------------------------------- */
+/* Sub Items */
+nav#site-navigation {
+	min-height: 74px;
+	margin: 0;
+	border: 0;
+}
+.navigation-bar-container {
+	position: absolute;
+	z-index: 1;
+	min-height: 75px;
+	width: 100%;
+}
+.navigation-bar {
+	min-height: 75px;
+	width: 100%;
+	background: #404c5c;
+}
+.navigation-bar-green-end {
+	width: 5%;
+	height: 0;
+	border-top: 75px solid #a5ce41;
+	border-left: 37px solid transparent;
+	position: absolute;
+	left: 18.5%;
+}
+.navigation-bar-green {
+	background: #a5ce41;
+	width: 77.5%;
+	position: absolute;
+	right: 0;
+}
+#navbar-recruitment.navigation-bar {
+	min-height: 75px;
+	width: 100%;
+	background: #a5ce41;
+}
+.navigation-bar-blue-end {
+	width: 5%;
+	height: 0;
+	border-top: 75px solid #206497;
+	border-left: 37px solid transparent;
+	position: absolute;
+	left: 18.5%;
+}
+.navigation-bar-blue {
+	background: #206497;
+	width: 77%;
+	position: absolute;
+	right: 0;
+}
+#navbar-training.navigation-bar {
+	min-height: 75px;
+	width: 100%;
+	background: #206497;
+}
+ul#menu-training {
+	padding: 0 0 0 20px;
+}
+ul#menu-main-menu {
+	padding: 0 0 0 35px;
+}
+.navbar-default {
+	max-height: 50px;
+	width: 100%;
+	border: none;
+	.navbar-nav {
+		>.open {
+			>a {
+				background: none;
+				color: @color_1;
+				&:hover {
+					background: none;
+					color: @color_1;
+				}
+				&:focus {
+					background: none;
+					color: @color_1;
+				}
+			}
+		}
+		>.active {
+			>a {
+				&:focus {
+					background: none;
+					color: @color_1;
+				}
+				color: @color_2;
+				border: solid #a5ce41;
+				border-width: 0 0 5px 0;
+				color: @color_2;
+				background: none;
+				&:hover {
+					color: @color_2;
+					background: none;
+				}
+			}
+			border: none;
+		}
+		>li {
+			>a {
+				color: @color_1;
+			}
+		}
+	}
+}
+.navbar-nav {
+	min-height: 74px;
+	width: 100%;
+}
+.navbar {
+	li {
+		a {
+			&:focus {
+				color: @color_1;
+			}
+			color: @color_1;
+		}
+	}
+	.navbar-collapse {
+		min-height: 74px;
+		z-index: 100;
+		position: relative;
+	}
+}
+.dropdown-menu {
+	>.active {
+		>a {
+			background: none;
+			color: @color_2;
+			&:hover {
+				background: none;
+				color: @color_2;
+			}
+			&:focus {
+				background: none;
+				color: @color_2;
+			}
+		}
+	}
+}
+.nav {
+	li {
+		min-height: 60px;
+		bottom: 0;
+		list-style: none;
+		padding: 0 0.1%;
+		margin: 14px 0 0 0;
+		display: inline-flex;
+		text-transform: uppercase;
+		font-size: 13px;
+		text-align: center;
+		a {
+			color: @color_1;
+			font-weight: 200;
+			font-size: 1.1em;
+			border-bottom: 5px solid transparent;
+			&:hover {
+				color: @color_1;
+				background: none;
+				color: @color_1;
+				color: @color_2;
+				border: solid #4c5a6c;
+				border-width: 0 0 5px 0;
+			}
+			&:focus {
+				color: @color_1;
+				background: none;
+				border: none;
+			}
+		}
+		ul {
+			li.current_page_item {
+				border-width: 0 0 1px 0;
+				&:hover {
+					border: none !important;
+				}
+			}
+			li {
+				a {
+					line-height: 30px;
+					margin: 2% 0 2% 0;
+					padding: 5% 0;
+					&:hover {
+						border: none;
+						background: none;
+						color: @color_2;
+					}
+				}
+				min-height: auto;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				border-bottom: 1px solid #fff;
+				text-align: left;
+				text-transform: none;
+				display: block;
+				&:hover {
+					border-bottom: 1px solid #a5ce41;
+				}
+				&:last-child {
+					border: none;
+				}
+			}
+			min-height: auto;
+			margin: 2% 0 2% 0;
+		}
+		a.active {
+			&:hover {
+				color: @color_2;
+				background: none;
+			}
+		}
+	}
+	.open {
+		>a {
+			background: none;
+			border: none;
+			&:hover {
+				background: none;
+				border: none;
+			}
+			&:focus {
+				background: none;
+				border: none;
+			}
+		}
+		a {
+			background: none;
+			border: none;
+		}
+	}
+	li.current_page_item {
+		&:hover {
+			border: none;
+		}
+	}
+}
+.open {
+	>.dropdown-menu {
+		padding: 0 12%;
+		display: block;
+		background: rgba(64, 76, 94, 0.9);
+		border: 0;
+		border-radius: 0;
+		top: 60px;
+	}
+}
+.open>.dropdown-menu {
+      @-moz-document url-prefix() {
+      padding: 20% 12%;
+      }
+}
+	.dropdown.open {
+		border: solid #a5ce41;
+		border-width: 0 0 5px 0;
+	}
